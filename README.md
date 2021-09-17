@@ -3,4 +3,4 @@ Logistic Regression and Recurrent Neural Network are applied to study a SMS data
 
 
 
-[Label.pdf](../main/SMSSpamDetection/Data/SMSSpamCollect_label.txt)
+[Label.pdf](../main/Data/SMSSpamCollect_label.txt)
