@@ -56,7 +56,7 @@ Classification Report:
 
 These performance results are obtained by training the RNN for 40 epochs. Observing how accuracy on test set changes as a function of the number of epochs, we can say we're not in an overfitting situation, but it is sufficient even only 20 epochs.
 
-<img src="https://user-images.githubusercontent.com/89379052/133884115-b4fb2f9f-ba82-48a2-a64d-412a58c2e6fb.png" width="50">
+<img src="https://user-images.githubusercontent.com/89379052/133884115-b4fb2f9f-ba82-48a2-a64d-412a58c2e6fb.png" width="200">
 
 If we want to investigate further the RNN, we can look for misclassified messages. Here some examples of misclassified: 
 
@@ -79,7 +79,7 @@ If we want to investigate further the RNN, we can look for misclassified message
 The first false positive is certainly an ambiguous message; finding strange messages among false positives occurs often, sometimes it is only the sender of the message (whether known or not) that clarifies if the message is really spam. The real problem of our classifier are false negatives; however, we could improve our network by increasing the subset of spam in the dataset, or by applying other techniques that we describe below.
 
 ## Possible future improvements and conclusions
-As expected, Recurrent Neural Network is more accurate than Logistic Regression. As written before, we could enhance both algorithms by increasing the subset of spam in the dataset. Also, it is possible to improve the preprocessing, we could remove special character ("&lt", "#&gt", ...) and we could use Stemming or Lemmatization to reduce inflection in words. Indeed, preprocessing is very important with NLP and in our classifiers Tokenization is a key step (for example, if we apply "texts_to_sequences" Tokenizer for Logistic Regression data, we get a value of 0.2 for recall of the Spam class).
+As expected, Recurrent Neural Network is more accurate than Logistic Regression. As written before, we could enhance both algorithms by increasing the subset of spam in the dataset. Also, it is possible to improve the preprocessing, we could remove special character ("&lt", "#&gt", ...) and we could use Stemming or Lemmatization to reduce inflection in words. Indeed, preprocessing is essential in NLP and Tokenization is a key step for both our classifiers (for example, if we apply "texts_to_sequences" Tokenizer for Logistic Regression data, we get a Recall of 0.2 for Spam class).
 Again, it might be possible to improve the structure of the RNN: the proposed RNN is obtained with a model selection on the recurrent layer (SimpleRNN, LSTM or GRU) and its direction (whether Bidirectional or not) and on the "embedding_space" dimensionality by fixing the size of the input arrays. It might be possibile to find a better classifier by changing the size of input arrays from 20. Adding another recurrent layer (SimpleRNN, LST or GRU) after GRU could be another idea to enhance the network, in order to increase the  network complexity and thus its learning capacity.
 
 
