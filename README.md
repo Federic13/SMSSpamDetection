@@ -1,8 +1,3 @@
-# SMSSpamDetection
-Logistic Regression and Recurrent Neural Network are applied to study a SMS dataset to detect spam
-
-
-
 # SMS Spam Detection
 
 The dataset we use is known as "SMS Spam Collection v. 1" and is a [public set](https://www.dt.fee.unicamp.br/~tiago/smsspamcollection/) of 5574 English, real and non-enconded messages, tagged according being legitimate (ham) or spam (4827 SMS ham messages and 747 SMS spam messages).
@@ -61,7 +56,7 @@ Classification Report:
 
 These performance results are obtained by training the RNN for 40 epochs. Observing how accuracy on test set changes as a function of the number of epochs, we can say we're not in an overfitting situation, but it is sufficient even only 20 epochs.
 
-![image](https://user-images.githubusercontent.com/89379052/133884115-b4fb2f9f-ba82-48a2-a64d-412a58c2e6fb.png "Training and test accuracy of RNN" {width=40px height= 200 px})
+![image](https://user-images.githubusercontent.com/89379052/133884115-b4fb2f9f-ba82-48a2-a64d-412a58c2e6fb.png {width=40px height= 200 px})
 
 If we want to investigate further the RNN, we can look for misclassified messages. Here some examples of misclassified: 
 
