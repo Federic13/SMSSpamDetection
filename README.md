@@ -5,12 +5,12 @@ Logistic Regression and Recurrent Neural Network are applied to study a SMS data
 
 # SMS Spam Detection
 
-The dataset we use is known as "SMS Spam Collection v. 1" ([dataset](https://www.dt.fee.unicamp.br/~tiago/smsspamcollection/)) and is a public set of 5574 English, real and non-enconded messages, tagged according being legitimate (ham) or spam (4827 SMS ham messages and 747 SMS spam messages).
+The dataset we use is known as "SMS Spam Collection v. 1" and is a [public set](https://www.dt.fee.unicamp.br/~tiago/smsspamcollection/) of 5574 English, real and non-enconded messages, tagged according being legitimate (ham) or spam (4827 SMS ham messages and 747 SMS spam messages).
 
 We use two different approaches: a machine learning and a deep learning algorithm. The fist is Logistic Regression, which is perhaps one of the best known ML algorithms. The second is a Recurrent Neural Network, which was created with the intention of analyzing temporal dependencies, but is widely used for speech recognition. We use two slightly different types of preprocessing and then analyze the results.
 
 ## Data preprocessing
-First of all, for both approaches we clean messages from special characters("\t", "\n") and then we replace every string with only numeric characters with the string "NNNNN". This idea is similar to what is described in the [paper](https://www.dt.fee.unicamp.br/~tiago/smsspamcollection/IJISS13.pdf) ("Towards SMS Spam Filtering: Results under a New Dataset"; Almeida, Hidalgo, Silva) and is used to reduce the amount of words we pass to tokenizer for encoding. 
+First of all, for both approaches we clean messages from special characters("\t", "\n") and then we replace every string with only numeric characters with the string "NNNNN". This idea is similar to what is described in ["Towards SMS Spam Filtering: Results under a New Dataset"](https://www.dt.fee.unicamp.br/~tiago/smsspamcollection/IJISS13.pdf) (Almeida, Hidalgo, Silva) and is used to reduce the amount of words we pass to tokenizer for encoding. 
 
 For Logistic Regression we use a "texts_to_matrix" Tokenizer. This method transforms an array of arbitrary length into a fixed-length array, where the length is the number of words in the dictionary, in our case 8000. More in detail, the array returned for a given message has on the i-th component the frequency in this message of the word associated with the integer i by the tokenizer. It is worth noting that this method does not take into account the order of the words in the message, but considers all the words contained in a message.
 
@@ -66,14 +66,19 @@ These performance results are obtained by training the RNN for 40 epochs. Observ
 If we want to investigate further the RNN, we can look for misclassified messages. Here some examples of misclassified: 
 
 1) False Positive: 
+
 -"This is ur face test ( NNNNN NNNNN NNNNN NNNNN NNNNN NNNNN NNNNN NNNNN NNNNN &lt,#&gt, ) select any number i will tell ur face astrology.... am waiting. quick reply..." 
+
 -"on a Tuesday night r u NNNNN real"
 
 2) False Negative:
  
 -"Missed call alert. These numbers called but left no message. NNNNN"
+
 -"Sorry I missed your call let's talk when you have the time. I'm on NNNNN"
+
 -"Email AlertFrom: Jeri StewartSize: 2KBSubject: Low-cost prescripiton drvgsTo listen to email call NNNNN"
+
 -"Do you realize that in about NNNNN years, we'll have thousands of old ladies running around with tattoos?"
 
 The first false positive is certainly an ambiguous message; finding strange messages among false positives occurs often, sometimes it is only the sender of the message (whether known or not) that clarifies if the message is really spam. The real problem of our classifier are false negatives; however, we could improve our network by increasing the subset of spam in the dataset, or by applying other techniques that we describe below.
