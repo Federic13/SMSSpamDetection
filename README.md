@@ -57,6 +57,8 @@ Classification Report:
 These performance results are obtained by training the RNN for 40 epochs. Observing how accuracy on test set changes as a function of the number of epochs, we can say we're not in an overfitting situation, but it is sufficient even only 20 epochs.
 
 <img src="https://user-images.githubusercontent.com/89379052/133884115-b4fb2f9f-ba82-48a2-a64d-412a58c2e6fb.png" width="600">
+![training and test accuracy](https://user-images.githubusercontent.com/89379052/133889534-115697e5-4b43-41f2-8eca-ffff29d445f1.png)
+
 
 If we want to investigate further the RNN, we can look for misclassified messages. Here some examples of misclassified: 
 
