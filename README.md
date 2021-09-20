@@ -25,34 +25,34 @@ a) Logistic Regression
 Accuracy: 0.9870875179340028
 
 Confusion Matrix: 
-|                    | Predicted label: 0 (Ham)  |  Predicted label: 1 (Spam)   |
+|                    | Predicted label: Ham (0)  |  Predicted label: Spam (1)   |
 |          :---      |          :---:            |           :---:              |
-|True label: 0 (Ham) |  1198                     |                            5 |
-|True label: 1 (Spam)|    13                     |                           178|
+|True label: Ham (0) |  1198                     |                            5 |
+|True label: Spam (1)|    13                     |                           178|
 
 Classification Report: 
 
 |  Class   |  Precision  |  Recall    | F1-score   |   Support |
 |   :---   |    :---:    |    :---:   |   :---:    |    :---:  |
-|  0 (Ham) |    0.99     |    1.00    |  0.99      |    1203   |
-| 1 (Spam) |    0.97     |   0.93     |   0.95     |    191    |
+|  Ham (0) |    0.99     |    1.00    |  0.99      |    1203   |
+| Spam (1) |    0.97     |   0.93     |   0.95     |    191    |
 
 b) Recurrent Neural Network
 
 Accuracy: 0.9913916786226685
 
 Confusion Matrix: 
-|                    | Predicted label: 0 (Ham)  |  Predicted label: 1 (Spam)   |
+|                    | Predicted label: Ham (0)  |  Predicted label: Spam (1)   |
 |          :---      |          :---:            |           :---:              |
-|True label: 0 (Ham) |  1201                     |                             2|
-|True label: 1 (Spam)|    10                     |                           181|
+|True label: Ham (0) |  1201                     |                             2|
+|True label: Spam (1)|    10                     |                           181|
 
 Classification Report: 
 
 |  Class   |  Precision  |  Recall    | F1-score   |   Support |
 |   :---   |    :---:    |    :---:   |   :---:    |    :---:  |
-|  0 (Ham) |    0.99     |    1.00    |  1.00      |    1203   |
-| 1 (Spam) |    0.99     |   0.95     |   0.97     |    191    |
+|  Ham (0) |    0.99     |    1.00    |  1.00      |    1203   |
+| Spam (1) |    0.99     |   0.95     |   0.97     |    191    |
 
 These performance results are obtained by training the RNN for 40 epochs. Observing how accuracy on test set changes as a function of the number of epochs, we can say we're not in an overfitting situation, but it is sufficient even only 20 epochs.
 
