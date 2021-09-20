@@ -16,7 +16,7 @@ Our first model is Logistic Regression with a very large number of features: 800
 
 The second model is composed by an Embedding layer followed by a Bidirectional GRU.
 The Embedding layer maps each word, represented by an integer, into a dense-array of fixed length, this length is known as "embedding_space". At theoretical level, the Embedding maps words into a meaning-space, so that words with similar meanings are represented by similar arrays (or arrays that have small distance). Our Embedding takes as input arrays of 20 elements and returns two-dimensional arrays of size (20,6), so the "embedding_space" is 6.
-Next, there is a Bidirectional GRU with an output space of dimension 6. It is in the GRU layer that words are seen together and their dependencies are modeled. Also, thanks to bidirectionality, words take on meaning based on context by considering both previous and following words. 
+Next, there is a Bidirectional GRU layer with output space of dimension 6. It is in the GRU layer that words are seen together and their dependencies are modeled. Also, thanks to bidirectionality, words take on meaning based on context by considering both previous and following words. 
 Lastly, a Dense layer with a single unit and a Sigmoid activation function aggregates information and returns the output. 
 
 ## Results
