@@ -2,7 +2,7 @@
 
 The dataset we use is known as "SMS Spam Collection v. 1" and is a [public set](https://www.dt.fee.unicamp.br/~tiago/smsspamcollection/) of 5574 English, real and non-enconded messages, tagged according being legitimate (ham) or spam (4827 SMS ham messages and 747 SMS spam messages).
 
-We use two different approaches: a machine learning and a deep learning algorithm. The first is Logistic Regression, which is perhaps one of the best known ML algorithms. The second is a Recurrent Neural Network, which was created with the intention of analyzing temporal dependencies, but is widely used for speech recognition. We use two slightly different types of preprocessing and then analyze the results.
+We use two different approaches: a machine learning and a deep learning algorithm. The first is Logistic Regression, which is perhaps one of the best known ML algorithms. The second is a Recurrent Neural Network, which was created with the intention of analyzing temporal dependencies, but is widely used for speech recognition. We use two slightly different preprocessing techniques and then analyze the results.
 
 ## Data preprocessing
 First of all, for both approaches we clean messages from special characters("\t", "\n") and then we replace every string with only numeric characters with the string "NNNNN". This idea is similar to what is described in ["Towards SMS Spam Filtering: Results under a New Dataset"](https://www.dt.fee.unicamp.br/~tiago/smsspamcollection/IJISS13.pdf) (Almeida, Hidalgo, Silva) and is used to reduce the amount of words we pass to tokenizer for encoding. 
