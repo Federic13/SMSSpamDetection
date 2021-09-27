@@ -1,4 +1,4 @@
-# SMS Spam Detection
+# SMS Spam Detection (Part 2)
 
 The dataset we use is known as "SMS Spam Collection v. 1" and is a [public set](https://www.dt.fee.unicamp.br/~tiago/smsspamcollection/) of 5574 English, real and non-encoded messages, tagged according being legitimate (ham) or spam (4827 SMS ham messages and 747 SMS spam messages).
 
